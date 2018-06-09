@@ -1,0 +1,10 @@
+.check-splitter-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  z-index: 100;
+}
+
+.check-splitter-container > * {
+  margin: 1em;
+}
