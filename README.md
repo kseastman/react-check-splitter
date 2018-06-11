@@ -7,6 +7,8 @@
 
 ## Instructions
 
+This is an in-class exercise, and will not be submitted.
+
 ### Setup
 
 ```
