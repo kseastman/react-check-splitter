@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './SplitInfo.css';
+
 const SplitInfo = (props) => {
   return (
-    <h1>TODO: SplitInfo</h1>
+    <h1 className="text-box">TODO: SplitInfo</h1>
   );
 };
 
