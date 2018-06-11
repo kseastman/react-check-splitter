@@ -18,41 +18,30 @@ class CheckForm extends React.Component {
     this.props.updateCheckCallback(key, value);
   }
 
+  // Inputs all look pretty much the same, so we'll
+  // use a helepr method to construct them.
+  buildInput(name, text) {
+    return (
+      <div>
+        <label htmlFor={name} className="text-box">
+          {text}
+        </label>
+        <input
+          name={name}
+          value={this.props[name]}
+          onChange={this.onInputChange}
+          />
+      </div>
+    );
+  }
+
   render() {
     return (
       <form className="check-form">
-        <div>
-          <label htmlFor="subtotal">Price before tax / tip</label>
-          <input
-            name="subtotal"
-            value={this.props.subtotal}
-            onChange={this.onInputChange}
-            />
-        </div>
-        <div>
-          <label htmlFor="tip">Tip percentage</label>
-          <input
-            name="tip"
-            value={this.props.tip}
-            onChange={this.onInputChange}
-            />
-        </div>
-        <div>
-          <label htmlFor="tax">Tax percentage</label>
-          <input
-            name="tax"
-            value={this.props.tax}
-            onChange={this.onInputChange}
-            />
-        </div>
-        <div>
-          <label htmlFor="split">Split how many ways</label>
-          <input
-            name="split"
-            value={this.props.split}
-            onChange={this.onInputChange}
-            />
-        </div>
+        {this.buildInput('subtotal', 'Price before tax / tip')}
+        {this.buildInput('tip', 'Tip percentage')}
+        {this.buildInput('tax', 'Tax percentage')}
+        {this.buildInput('split', 'Split how many ways')}
       </form>
     )
   }

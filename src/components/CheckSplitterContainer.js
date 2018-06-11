@@ -29,6 +29,16 @@ class CheckSplitterContainer extends React.Component {
     this.setState(update);
   }
 
+  calculateSplit() {
+    // TODO: bill math
+    return {
+      taxAmount: 0,
+      tipAmount: 0,
+      totalPrice: 0,
+      pricePerHead: 0,
+    }
+  }
+
   render() {
     return(
       <div className="check-splitter-container">
