@@ -5,7 +5,7 @@ import './SplitInfo.css';
 
 const SplitInfo = (props) => {
   return (
-    <h1 className="text-box">TODO: SplitInfo</h1>
+    <h2 className="text-box">TODO: SplitInfo</h2>
   );
 };
 
