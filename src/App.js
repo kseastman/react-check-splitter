@@ -8,7 +8,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img className='background-image' src='https://goodstock.photos/wp-content/uploads/empty-plate-fork-knife.jpg' />
+        <img className='background-image'
+          src='https://goodstock.photos/wp-content/uploads/empty-plate-fork-knife.jpg'
+          alt='Background'
+          />
         <h1>Ada Check Splitter</h1>
         <CheckSplitterContainer />
 
