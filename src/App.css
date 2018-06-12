@@ -1,28 +1,62 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: rgb(201, 195, 170);
+
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+#root {
+  height: 100%;
+}
+
 .App {
+  height: 100%;
+  position: relative;
+  min-height: 30rem;
+}
+
+.App h1 {
   text-align: center;
+  margin-top: 0;
+  padding-top: 1.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.background-image {
+  /* Make space for the header */
+  position: absolute;
+  top: 5.5rem;
+
+  /*
+  Background image should take up 100% of space not
+  filled by the header and footer
+  */
+  max-height: -webkit-calc(100% - 8.5rem);
+  max-height:    -moz-calc(100% - 8.5rem);
+  max-height:         calc(100% - 8.5rem);
+
+  /* Should scale to the width and crop the rest */
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.App footer {
+  height: 1.5rem;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  padding: .5em;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.text-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: .5em;
+  border: 1px black solid;
 }

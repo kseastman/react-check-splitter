@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
+import CheckSplitterContainer from './components/CheckSplitterContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <img className='background-image'
+          src='https://goodstock.photos/wp-content/uploads/empty-plate-fork-knife.jpg'
+          alt='Background'
+          />
+        <h1>Ada Check Splitter</h1>
+        <CheckSplitterContainer />
+
+        <footer>
+          &copy;2018, Ada Developers Academy
+        </footer>
       </div>
     );
   }
