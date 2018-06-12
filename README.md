@@ -9,6 +9,10 @@
 
 This is an in-class exercise, and will not be submitted.
 
+Once you're finished with all waves, you should have something like this:
+
+![Example implementation](images/example-implementation.png)
+
 ### Setup
 
 ```
