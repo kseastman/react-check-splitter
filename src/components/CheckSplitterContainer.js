@@ -30,16 +30,38 @@ class CheckSplitterContainer extends React.Component {
   }
 
   calculateSplit() {
-    // TODO: bill math
+    const subtotal = parseFloat(this.state.subtotal);
+    const tip = subtotal * parseFloat(this.state.tip) / 100;
+    const tax = subtotal * parseFloat(this.state.tax) / 100;
+    const split = parseFloat(this.state.split);
+    const total = subtotal + tip + tax
+
     return {
-      taxAmount: 0,
-      tipAmount: 0,
-      totalPrice: 0,
-      pricePerHead: 0,
+      taxAmount: tax.toFixed(2),
+      tipAmount: tip.toFixed(2),
+      totalPrice: total.toFixed(2),
+      pricePerHead: (total / split).toFixed(2),
     }
   }
 
+  splitInfo = (info) => {
+    return(
+      <SplitInfo
+        key=""
+        taxAmount={info.taxAmount}
+        tipAmount={info.tipAmount}
+        totalPrice={info.totalPrice}
+        pricePerHead={info.pricePerHead}
+        />
+    )
+  }
+
   render() {
+    const rawInfo = this.calculateSplit();
+    console.log(rawInfo)
+    const splitInfo = this.splitInfo(rawInfo);
+    console.log(splitInfo);
+
     return(
       <div className="check-splitter-container">
         <CheckForm
@@ -49,7 +71,7 @@ class CheckSplitterContainer extends React.Component {
           split={this.state.split}
           updateCheckCallback={this.updateCheck}
           />
-        <SplitInfo />
+        {splitInfo}
       </div>
     );
   }
